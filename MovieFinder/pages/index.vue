@@ -3,7 +3,7 @@
   <div class="container">
     <div class="block">
       <div class="flex justify-center items-center mt-5 p-4 md:h-2/5">
-        <h1 class="text-2xl">MovieFinder</h1>
+        <h1 class="text-2xl font-black ">MovieFinder</h1>
         <img src="../public/logo.png" alt="" class="w-48">
       </div>
 
@@ -28,7 +28,7 @@
               <div class="p-0 flex">
                 <img :src="result._rawValue.Poster" alt="poster" class="h-auto w-1/2">
                 <div class="w-1/2">
-                  <span>{{ result._rawValue.Title }}</span>
+                  <span class="font-bold">{{ result._rawValue.Title }}</span>
                   <div class="bottom">
                     <p>{{ result._rawValue.Year }}</p>
                     <p>{{ result._rawValue.Director }}</p>

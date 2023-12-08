@@ -10,13 +10,13 @@
                 </div>
 
                 <div class="w-2/3 p-4">
-                    <p class="font-black">{{ movieData.Title }}</p>
-                    <p><span class="font-bold">Director: </span>{{ movieData.Director }}</p>
-                    <p><span class="font-bold">Year: </span>{{ movieData.Year }}</p>
-                    <p><span class="font-bold">Genre: </span>{{ movieData.Genre }}</p>
-                    <p><span class="font-bold">Country: </span>{{ movieData.Country }}</p>
-                    <p><span class="font-bold">BoxOffice: </span>{{ movieData.BoxOffice }}</p>
-                    <p><span class="font-bold">Plot: </span>{{ movieData.Plot }}</p>
+                    <p class="font-extrabold text-2xl mb-3">{{ movieData.Title }}</p>
+                    <p class="mb-1"><span class="font-bold">Director: </span>{{ movieData.Director }}</p>
+                    <p class="mb-1"><span class="font-bold">Year: </span>{{ movieData.Year }}</p>
+                    <p class="mb-1"><span class="font-bold">Genre: </span>{{ movieData.Genre }}</p>
+                    <p class="mb-1"><span class="font-bold">Country: </span>{{ movieData.Country }}</p>
+                    <p class="mb-1"><span class="font-bold">BoxOffice: </span>{{ movieData.BoxOffice }}</p>
+                    <p class="mb-1"><span class="font-bold">Plot: </span>{{ movieData.Plot }}</p>
                 </div>
                 
             </div>

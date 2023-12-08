@@ -114,7 +114,6 @@ const onInputChange = async () => {
 
 const search = () => {
   searchResults.value = searchResult.value;
-  console.log(searchResults.value);
   searchResultsDisplay.value = true;
   inputChange.value = false;
   localStorage.setItem('searchResults', JSON.stringify(searchResults.value));
@@ -134,9 +133,9 @@ const handleResize = () => {
 };
 
 const getItemsToShow = computed(() => {
-  if (screenWidth.value < 768) { // Для екранів менше 768px
+  if (screenWidth.value < 768) { 
     return 1;
-  } else if (screenWidth.value < 1024) { // Для екранів менше 1024px
+  } else if (screenWidth.value < 1024) { 
     return 2;
   } else {
     return 3;

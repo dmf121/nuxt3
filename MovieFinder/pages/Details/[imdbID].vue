@@ -13,6 +13,7 @@
                     <p class="font-extrabold text-2xl mb-3">{{ movieData.Title }}</p>
                     <p class="mb-1"><span class="font-bold">Director: </span>{{ movieData.Director }}</p>
                     <p class="mb-1"><span class="font-bold">Year: </span>{{ movieData.Year }}</p>
+                    <p class="mb-1"><span class="font-bold">Actors: </span>{{ movieData.Actors }}</p>
                     <p class="mb-1"><span class="font-bold">Genre: </span>{{ movieData.Genre }}</p>
                     <p class="mb-1"><span class="font-bold">Country: </span>{{ movieData.Country }}</p>
                     <p class="mb-1"><span class="font-bold">BoxOffice: </span>{{ movieData.BoxOffice }}</p>

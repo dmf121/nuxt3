@@ -9,7 +9,7 @@
                     <img :src=movieData.Poster alt="" class="w-11/12 mx-auto">
                 </div>
 
-                <div class="w-2/3 p-4">
+                <div class="md:w-2/3 lg:w-2/3 p-4">
                     <p class="font-extrabold text-2xl mb-3">{{ movieData.Title }}</p>
                     <p class="mb-1"><span class="font-bold">Director: </span>{{ movieData.Director }}</p>
                     <p class="mb-1"><span class="font-bold">Year: </span>{{ movieData.Year }}</p>
@@ -29,8 +29,8 @@
 </template>
 
 <script setup>
-  import { ref, onMounted } from 'vue';
-  
+import { ref, onMounted } from 'vue';
+
 const route = useRoute();
 const movieData = ref(null);
 

@@ -21,7 +21,9 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
     "nuxt-vite": "^0.3.5",
+    "pinia": "^2.1.7",
     "vue-fetch": "^2.0.0",
     "vue3-carousel": "^0.3.1"
   }

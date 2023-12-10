@@ -2,7 +2,8 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     css: ['~/assets/css/main.css'],
     modules: [
-        '@element-plus/nuxt'
+        '@element-plus/nuxt',
+        '@pinia/nuxt',
     ],
     postcss: {
       plugins: {
@@ -10,4 +11,8 @@ export default defineNuxtConfig({
         autoprefixer: {},
       },
     },
+    buildModules: [
+      'nuxt-pinia',
+      
+    ],
   })

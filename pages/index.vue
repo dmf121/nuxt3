@@ -20,7 +20,7 @@
       
       
 
-      <div class="searchbar-results mx-auto w-full md:w-3/4 px-6">
+      <div class="searchbar-results mx-auto w-full md:w-3/4 ">
         <ul v-if="inputChange">
           <li v-for="result in searchBarResults" :key="result.imdbID">
             <NuxtLink :to="{ path: `/details/${result.imdbID}` }">{{ result.Title }}</NuxtLink>
@@ -28,8 +28,8 @@
         </ul>
       </div>
 
-      <div class="search-results " v-if="searchResultsDisplay">
-        <carousel :items-to-show="getItemsToShow" class="h-full px-10 my-8" v-if="!(searchResults.length === 0)">
+      <div class="search-results mt-20" v-if="searchResultsDisplay">
+        <carousel :items-to-show="getItemsToShow" class="h-full px-10 " v-if="!(searchResults.length === 0)">
           <slide v-for="result in searchResults" :key="result.imdbID" class="mark w-4/5">
             <NuxtLink :to="{ path: `/details/${result._rawValue.imdbID}` }" class="h-full">
               <div class="p-2 flex h-full">
@@ -37,7 +37,7 @@
                   <img :src="result._rawValue.Poster" alt="poster" class="h-full">
                 </div>
                 
-                <div class="w-1/2">
+                <div class="w-1/2 px-1">
                   <span class="font-bold">{{ result._rawValue.Title }}</span>
                   <div class="bottom">
                     <p>{{ result._rawValue.Year }}</p>

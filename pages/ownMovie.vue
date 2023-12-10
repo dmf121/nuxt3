@@ -19,20 +19,20 @@
                 <label for="year" class=" mr-4 block">Year:</label>
                 <input v-model="year" type="number" id="year" required min="1901" max="2040" class="w-1/2 md:w-1/5 lg:w-1/5 border-2 rounded mb-3">
                 <div>
-                    <button type="submit" class="addMovie rounded ml-auto">Add</button>
+                    <button type="submit" class="addMovie rounded mt-6">Add</button>
                 </div>
                 
             </form>
     
             <!-- Відображення доданих фільмів -->
             <div v-if="movieStore.movies.length > 0">
-                <h2 class="text-center text-lg">Added movies: </h2>
+                <h2 class="text-center text-lg mt-12 mb-12">Added movies: </h2>
                 <ul class="flex flex-wrap">
                 <!-- Додані фільми в movieStore -->
                     <li v-for="movie in movieStore.movies" :key="movie.title" class="w-full lg:w-1/2 md:w-1/2 p-3">
                         <div class="flex justify-between border p-1">
                             <img :src="movie.poster" alt="Poster" class="h-40">
-                            <div class="mx-auto">
+                            <div class="ml-8 w-4/5">
                                 <span class="w-full">{{ movie.title }}</span>
                                 <p>{{ movie.year }}</p>
                                 <p>{{ movie.director }}</p>

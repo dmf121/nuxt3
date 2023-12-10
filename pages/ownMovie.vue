@@ -1,4 +1,3 @@
-
 <template>
     <div class="container mx-auto">
         <NuxtLink to="/" >
@@ -24,11 +23,9 @@
                 
             </form>
     
-            <!-- Відображення доданих фільмів -->
             <div v-if="movieStore.movies.length > 0">
                 <h2 class="text-center text-lg mt-12 mb-12">Added movies: </h2>
                 <ul class="flex flex-wrap">
-                <!-- Додані фільми в movieStore -->
                     <li v-for="movie in movieStore.movies" :key="movie.title" class="w-full lg:w-1/2 md:w-1/2 p-3">
                         <div class="flex justify-between border p-1">
                             <img :src="movie.poster" alt="Poster" class="h-40">
@@ -43,7 +40,6 @@
                 </ul>
             </div>
         </div>
-        
     </div>
   </template>
   
@@ -59,10 +55,7 @@
   
   const addMovie = () => {
     const movie = { title: title.value, poster: poster.value, director: director.value, year: year.value };
-    // Додати фільм в movieStore
     movieStore.addMovie(movie);
-  
-    // Очистити поля після додавання фільму
     title.value = '';
     poster.value = '';
     director.value = '';
@@ -73,12 +66,10 @@
   movieStore.removeMovie(movie);
 };
   
-  // Завантажити фільми з sessionStorage при запуску компонента
   onMounted(() => {
     movieStore.loadMoviesFromSessionStorage();
   });
   
-  // Зберегти фільми в sessionStorage при закритті компонента
   onBeforeUnmount(() => {
     movieStore.saveMoviesToSessionStorage();
   });
@@ -90,6 +81,5 @@
         padding: 5px 10px;
         color: white;
     }
-
 </style>
   

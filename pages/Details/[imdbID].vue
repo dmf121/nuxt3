@@ -19,12 +19,8 @@
                     <p class="mb-1"><span class="font-bold">BoxOffice: </span>{{ movieData.BoxOffice }}</p>
                     <p class="mb-1"><span class="font-bold">Plot: </span>{{ movieData.Plot }}</p>
                 </div>
-                
             </div>
-        
         </div>
-    
-        
     </div>
 </template>
 
@@ -38,12 +34,10 @@ const fetchData = async () => {
     try {
       const { data: data } = await useFetch(`https://www.omdbapi.com/?apikey=df35e7&i=${route.params.imdbID}`);
       movieData.value = data._rawValue;
-
     } catch (error) {
       console.error('Помилка під час отримання результатів пошуку:', error.message);
     }
   };
-  
 
 onMounted(async () => {
   await fetchData();

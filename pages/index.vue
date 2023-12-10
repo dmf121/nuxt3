@@ -17,8 +17,6 @@
           <el-button @click="clearSearch" type="danger" :disabled="searchResults.length === 0">Clear</el-button>
         </div>
       </div>
-      
-      
 
       <div class="searchbar-results mx-auto w-full md:w-3/4 ">
         <ul v-if="inputChange">
@@ -36,7 +34,6 @@
                 <div class="w-1/2">
                   <img :src="result._rawValue.Poster" alt="poster" class="h-full">
                 </div>
-                
                 <div class="w-1/2 px-1">
                   <span class="font-bold">{{ result._rawValue.Title }}</span>
                   <div class="bottom">
@@ -55,13 +52,9 @@
       </div>
     </div>
   </div>
-  
 </template>
 
-
-
 <script setup>
-
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 const query = ref('');
@@ -72,15 +65,12 @@ const searchResultsDisplay = ref(false);
 const inputChange = ref(false);
 const screenWidth = ref(process.client ? window.innerWidth : null);
 
-
 onMounted(() => {
-
   const savedResults = localStorage.getItem('searchResults');
   if (savedResults) {
     searchResults.value = JSON.parse(savedResults);
     searchResultsDisplay.value = true;
   }
-  
   if (process.client) {
     window.addEventListener('resize', handleResize);
   }
@@ -88,12 +78,10 @@ onMounted(() => {
 
 const onInputChange = () => {
   inputChange.value = true;
-
   if (query.value.trim() === '') {
     return;
   }
 
-  // Затримка виклику функції на 2 секунди після завершення введення
   clearTimeout(timer);
   timer = setTimeout(async () => {
     try {
@@ -125,7 +113,7 @@ const onInputChange = () => {
     if (searchResults.value.length > 0) {
       localStorage.setItem('searchResults', JSON.stringify(searchResults.value));
     }
-  }, 1500); // Таймер на 2 секунди
+  }, 1500); 
 };
 
 let timer;
@@ -135,7 +123,6 @@ const search = () => {
   searchResultsDisplay.value = true;
   inputChange.value = false;
   localStorage.setItem('searchResults', JSON.stringify(searchResults.value));
-
 };
 
 const clearSearch = () => {
